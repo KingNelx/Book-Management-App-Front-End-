@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
+
 const PetsTable = () => {
     return (
         <div>
-            <button type="button" class="btn btn-outline-primary mt-5 mx-5">Register a Pet</button>
+            <Link to="/registerPet" type="button" class="btn btn-outline-primary mt-5 mx-5">Register a Pet</Link>
             <section className="container mt-5">
                 <table class="table table-striped text-center">
                     <thead>
@@ -20,9 +22,9 @@ const PetsTable = () => {
                             <td>Otto</td>
                             <td>@mdo</td>
                             <td>
-                            <button type="button" class="btn btn-outline-primary">View</button>
-                            <button type="button" class="btn btn-outline-success mx-2">Update</button>
-                            <button type="button" class="btn btn-outline-danger">Remove</button>
+                                <button type="button" class="btn btn-outline-primary">View</button>
+                                <button type="button" class="btn btn-outline-success mx-2">Update</button>
+                                <button type="button" class="btn btn-outline-danger">Remove</button>
                             </td>
                         </tr>
                     </tbody>
