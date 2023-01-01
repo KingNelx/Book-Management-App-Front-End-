@@ -1,4 +1,4 @@
-{
+  {
   "name": "front-end-pets",
   "private": true,
   "version": "0.0.0",
@@ -8,16 +8,23 @@
     "build": "vite build",
     "preview": "vite preview"
   },
+  
   "dependencies": {
+    "axios": "^1.2.2",
     "bootstrap": "^5.3.0-alpha1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router": "^6.6.1"
   },
+  "snowpack":{
+    "webDependencies": 
+      "axios"
+  },
   "devDependencies": {
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
     "@vitejs/plugin-react": "^3.0.0",
+    "snowpack": "^3.8.8",
     "vite": "^4.0.0"
   }
 }
