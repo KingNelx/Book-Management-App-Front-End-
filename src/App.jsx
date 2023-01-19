@@ -6,6 +6,7 @@ import AllCats from './Components/AllCats';
 import AllDogs from './Components/AllDogs';
 import AllSnake from './Components/AllSnake';
 import AllBirds from './Components/AllBirds';
+import AllFish from './Components/AllFish';
 const App = () => {
   return (
 
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/allCats" element={<AllCats />} />
         <Route path="/allSnakes" element={<AllSnake />} />
         <Route path="/allBirds" element={<AllBirds />} />
+        <Route path="/allFish" element={<AllFish />} />
       </Routes>
     </Router>
 

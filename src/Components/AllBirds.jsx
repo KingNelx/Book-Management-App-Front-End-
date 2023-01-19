@@ -6,13 +6,13 @@ const AllBirds = () => {
 
     const [bird, setBirds] = useState([])
     const getAllBirds = async () => {
-        const result = await axios.get("http://localhost:8080/pets/getAllCats")
+        const result = await axios.get("http://localhost:8080/pets/getAllBirds")
         setBirds(result.data)
     }
 
     useEffect(() => {
         getAllBirds()
-    })
+    }, [])
 
     return (
         <div className="container mt-5">
