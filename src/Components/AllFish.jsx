@@ -1,6 +1,19 @@
 import { Link } from "react-router-dom"
+import axios from "axios"
+import { useState, useEffect } from "react"
 
 const AllFish = () => {
+
+    const [fish, setFish] = useState([])
+
+    useEffect(() => {
+        getAllFish()
+    }, [])
+
+    const getAllFish = async () => {
+        const result = await axios.get("http://localhost:8080/pets/getAllFish")
+        setFish(result.data)
+    }
 
     return (
         <div className="container mt-5">
@@ -16,7 +29,17 @@ const AllFish = () => {
                     </tr>
                 </thead>
                 <tbody>
-              
+                    {
+                        fish.map((fishes, index) => (
+                            <tr>
+                                <th scope="row" key={index}>{index + 1}</th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                            </tr>
+                        ))
+                    }
                 </tbody>
             </table>
             <Link to="/">Go Back</Link>
