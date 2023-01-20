@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Others from "./Others";
 import axios from 'axios'
 import { useState, useEffect } from "react"
+import '../assets/Scroll.css'
 
 const PetsTable = () => {
 
@@ -19,7 +20,7 @@ const PetsTable = () => {
         <div>
             <Link to="/registerPet" type="button" class="btn btn-outline-primary mt-5 mx-5">Register a Pet</Link>
             <Others />
-            <section className="container mt-5">
+            <section className="container mt-5 scrollbar">
                 <table class="table table-striped text-center">
                     <thead>
                         <tr>
@@ -35,7 +36,7 @@ const PetsTable = () => {
                         {
                             pet.map((pets, index) => (
                                 <tr>
-                                    <th scope="row" key={index}>{index+1}</th>
+                                    <th scope="row" key={index}>{index + 1}</th>
                                     <td>{pets.petName}</td>
                                     <td>{pets.ownerName}</td>
                                     <td>{pets.typeOfPet}</td>

@@ -12,9 +12,9 @@ const Others = () => {
                     <li><Link to="/allCats" class="dropdown-item" href="#">CATS</Link></li>
                     <li><Link to="/allBirds" class="dropdown-item" href="#">BIRDS</Link></li>
                     <li><Link to="/allSnakes" class="dropdown-item" href="#">SNAKES</Link></li>
-                    <li><Link to="" class="dropdown-item" href="#">FISH</Link></li>
-                    <li><Link to="" class="dropdown-item" href="#">TURTLES</Link></li>
-                    <li><Link to="" class="dropdown-item" href="#">RABBITS</Link></li>
+                    <li><Link to="/allFish" class="dropdown-item" href="#">FISH</Link></li>
+                    <li><Link to="/allTurtles" class="dropdown-item" href="#">TURTLES</Link></li>
+                    <li><Link to="/allRabbits" class="dropdown-item" href="#">RABBITS</Link></li>
                 </ul>
             </div>
         </div>

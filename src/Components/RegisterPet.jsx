@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 const RegisterPet = () => {
 
@@ -23,7 +24,7 @@ const RegisterPet = () => {
     const onSubmit = () => {
 
     }
-      
+
     return (
         <div className="container mt-5 col-md-4">
             <form>
@@ -69,7 +70,8 @@ const RegisterPet = () => {
                     } />
                 </div>
 
-                <button type="submit" class="btn btn-primary">Register</button>
+                <button type="button" class="btn btn-outline-primary">Register</button>
+                <Link to="/" class="btn btn-danger mx-2"> Back </Link>
             </form>
         </div>
     );

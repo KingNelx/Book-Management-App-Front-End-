@@ -4,7 +4,7 @@ const AllFish = () => {
 
     return (
         <div className="container mt-5">
-            <h2 className="mb-5">List of Birds</h2>
+            <h2 className="mb-5">List of Fish</h2>
             <table class="table table-striped text-center">
                 <thead>
                     <tr>
@@ -16,16 +16,7 @@ const AllFish = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {
-
-                        <td>
-                            <button type="button" class="btn btn-outline-primary">View</button>
-                            <button type="button" class="btn btn-outline-success mx-2">Update</button>
-                            <button type="button" class="btn btn-outline-danger">Remove</button>
-                        </td>
-                            
-                       
-                    }
+              
                 </tbody>
             </table>
             <Link to="/">Go Back</Link>

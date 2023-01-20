@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom"
 
-const AllTurtles = () => {
+const AllRabits = () => {
 
     return (
         <div className="container mt-5">
-            <h2 className="mb-5">List of Turtles</h2>
+            <h2 className="mb-5">List of Rabits</h2>
             <table class="table table-striped text-center">
                 <thead>
                     <tr>
@@ -24,4 +24,4 @@ const AllTurtles = () => {
     )
 }
 
-export default AllTurtles;
+export default AllRabits;
