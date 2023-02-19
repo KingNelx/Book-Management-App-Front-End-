@@ -1,4 +1,5 @@
 import Topnav from "./TopNav";
+import ViewPets from "./ViewPets";
 
 const Home = () => {
   return (
@@ -6,6 +7,10 @@ const Home = () => {
       <nav>
         <Topnav />
       </nav>
+
+      <section>
+        <ViewPets />
+      </section>
     </div>
   );
 };
