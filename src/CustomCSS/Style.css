@@ -1,4 +1,8 @@
 .pet-logo {
-   height: 70vh;
+   height: 60vh;
    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+a{
+    text-decoration: none;
 }
