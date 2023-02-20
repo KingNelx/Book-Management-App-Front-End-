@@ -13,12 +13,13 @@ const Topnav = () => {
               placeholder="Search"
               aria-label="Search"
             />
-            <button class="btn btn-outline-success" type="submit">
-              <Link to="/"> Back </Link>
-            </button>
+              <Link to="/" className="btn btn-outline-success"> Back </Link>
           </form>
         </div>
       </nav>
+     <section className="mt-5 mx-5">
+     <Link to="/registerPet" type="button" class="btn btn-outline-primary">Register Pet</Link>
+     </section>
     </div>
   );
 };
