@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-
+import '../CustomCSS/Scroll.css'
 const ViewPets = () => {
   const [pet, setPet] = useState([]);
 
@@ -15,7 +15,7 @@ const ViewPets = () => {
   }, []);
 
   return (
-    <div className="container mt-5 text-center" style={{ overflowX: "auto" }}>
+    <div className="container mt-5 text-center scroller">
       <table className="table table-striped table-hover">
         <thead>
           <tr>

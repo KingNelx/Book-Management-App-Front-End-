@@ -31,7 +31,7 @@ const Topnav = () => {
         >
           Register Pet
         </button>
-
+        <Link to="/otherPets" class="btn btn-outline-primary mx-2">See Other Pets</Link>
         <div
           class="modal fade"
           id="staticBackdrop"
@@ -153,9 +153,6 @@ const Topnav = () => {
                   data-bs-dismiss="modal"
                 >
                   Close
-                </button>
-                <button type="button" class="btn btn-primary">
-                  Understood
                 </button>
               </div>
             </div>
