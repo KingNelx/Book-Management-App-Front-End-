@@ -3,7 +3,7 @@ import PetCols from "./PetCols";
 const Others = () => {
   return (
     <nav>
-      <nav class="navbar bg-body-tertiary shadow-lg m-2">
+      <nav class="navbar bg-body-tertiary shadow-lg m-2 sticky-top">
         <div class="container-fluid">
           <a class="navbar-brand">OTHERS</a>
           <form class="d-flex" role="search">
