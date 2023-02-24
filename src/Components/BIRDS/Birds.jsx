@@ -1,3 +1,5 @@
+import BirdsData from "./BirdsData";
+
 const Birds = () => {
     return (
       <div>
@@ -17,6 +19,7 @@ const Birds = () => {
             </form>
           </div>
         </nav>
+        <BirdsData />
       </div>
     );
   };
