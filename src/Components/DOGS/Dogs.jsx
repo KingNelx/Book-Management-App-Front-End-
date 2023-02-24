@@ -1,3 +1,5 @@
+import DogsData from "./DogsData";
+
 const Dogs = () => {
   return (
     <div>
@@ -17,6 +19,7 @@ const Dogs = () => {
           </form>
         </div>
       </nav>
+      <DogsData />
     </div>
   );
 };
