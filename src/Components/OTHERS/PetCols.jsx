@@ -5,6 +5,7 @@ import rabbit from '..//../Images/rabbit.jpg'
 import snake from '..//..//Images/snake.jpg'
 import turtle from '..//..//Images/turtle.jpg'
 import '..//..//CustomCSS/PetImg.css'
+import { Link } from 'react-router-dom'
 
 const PetCols = () => {
   return (
@@ -19,9 +20,9 @@ const PetCols = () => {
                 <p class="card-text">
                  
                 </p>
-                <a href="#" class="btn btn-primary">
+                <Link to="/dogs" class="btn btn-primary">
                  View
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -33,9 +34,9 @@ const PetCols = () => {
                 <p class="card-text">
                  
                 </p>
-                <a href="#" class="btn btn-primary">
+                <Link to="/cats" class="btn btn-primary">
                  View
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -47,9 +48,9 @@ const PetCols = () => {
                 <p class="card-text">
                   
                 </p>
-                <a href="#" class="btn btn-primary">
+                <Link to="/rabbits" class="btn btn-primary">
                   View
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -66,9 +67,9 @@ const PetCols = () => {
                 <p class="card-text">
                   
                 </p>
-                <a href="#" class="btn btn-primary">
+                <Link to="/turtles" class="btn btn-primary">
                   View
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -80,9 +81,9 @@ const PetCols = () => {
                 <p class="card-text">
                  
                 </p>
-                <a href="#" class="btn btn-primary">
+                <Link to="/snakes" class="btn btn-primary">
                   View
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -94,9 +95,9 @@ const PetCols = () => {
                 <p class="card-text">
                  
                 </p>
-                <a href="#" class="btn btn-primary">
+                <Link to="/birds" class="btn btn-primary">
                   View
-                </a>
+                </Link>
               </div>
             </div>
           </div>
