@@ -1,13 +1,16 @@
 import { useState, useEffect } from "react";
-import {Link} from "react-router-dom"
-import axios from "axios"
+import { Link } from "react-router-dom";
+import axios from "axios";
 
 const RabbitsData = () => {
   const [rabbits, setRabbits] = useState([]);
-
-  useEffect( () => {
-
-  }, [])
+  const loadAllRabbits = async () => {
+    const result = await axios.get("http://localhost:8080/queryAllRabbits");
+    setRabbits(result.data);
+  };
+  useEffect(() => {
+    loadAllRabbits();
+  }, []);
 
   return (
     <div className="container mt-5 text-center">
@@ -16,18 +19,36 @@ const RabbitsData = () => {
           <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
+              <th scope="col">Owner Name</th>
+              <th scope="col">Pet Name</th>
+              <th scope="col">Pet Gender</th>
+              <th scope="col">Pet Age</th>
+              <th scope="col">Action</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
+            {rabbits.map((rabbit, index) => (
+              <tr>
+                <th scope="row" key={index}>
+                  {index + 1}
+                </th>
+                <td>{rabbit.ownerName}</td>
+                <td>{rabbit.petName}</td>
+                <td>{rabbit.petGender}</td>
+                <td>{rabbit.petAge}</td>
+                <td>
+                  <button type="button" class="btn btn-outline-primary">
+                    VIEW
+                  </button>
+                  <button type="button" class="btn btn-outline-success mx-2">
+                    UPDATE
+                  </button>
+                  <button type="button" class="btn btn-outline-danger">
+                    DELETE
+                  </button>
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       ) : (

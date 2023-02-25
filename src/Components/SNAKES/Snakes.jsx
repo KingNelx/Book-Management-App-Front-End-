@@ -1,3 +1,5 @@
+import SnakesData from "./SnakesData";
+
 const Snakes = () => {
     return (
       <div>
@@ -17,6 +19,7 @@ const Snakes = () => {
             </form>
           </div>
         </nav>
+        <SnakesData />
       </div>
     );
   };
