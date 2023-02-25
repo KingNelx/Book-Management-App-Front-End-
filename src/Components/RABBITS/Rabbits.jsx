@@ -1,3 +1,5 @@
+import RabbitsData from "./RabbitsData";
+
 const Rabbits = () => {
     return (
       <div>
@@ -17,6 +19,7 @@ const Rabbits = () => {
             </form>
           </div>
         </nav>
+        <RabbitsData />
       </div>
     );
   };

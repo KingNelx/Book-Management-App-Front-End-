@@ -51,7 +51,7 @@ const CatsData = () => {
           </tbody>
         </table>
       ) : (
-        <p> No DATA FOUND </p>
+        <p> NO DATA FOUND </p>
       )}
       <Link to="/otherPets"> Go Back </Link>
     </div>
