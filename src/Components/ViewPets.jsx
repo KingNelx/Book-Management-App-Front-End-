@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import '../CustomCSS/Scroll.css'
+import "../CustomCSS/Scroll.css";
+import { Link } from "react-router-dom";
 
 const ViewPets = () => {
   const [pet, setPet] = useState([]);
@@ -31,7 +32,9 @@ const ViewPets = () => {
         <tbody>
           {pet.map((pets, index) => (
             <tr>
-              <th scope="row" key={index}>{index+1}</th>
+              <th scope="row" key={index}>
+                {index + 1}
+              </th>
               <td>{pets.ownerName}</td>
               <td>{pets.petName}</td>
               <td>{pets.address}</td>

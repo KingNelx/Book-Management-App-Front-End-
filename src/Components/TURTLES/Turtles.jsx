@@ -1,3 +1,5 @@
+import TurtlesData from "./TurtlesData";
+
 const Turtles = () => {
     return (
       <div>
@@ -17,6 +19,7 @@ const Turtles = () => {
             </form>
           </div>
         </nav>
+        <TurtlesData />
       </div>
     );
   };

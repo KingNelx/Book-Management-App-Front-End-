@@ -103,6 +103,10 @@ const PetCols = () => {
           </div>
         </div>
       </div>
+      <footer className="text-center">
+      <Link to="/home"> Go Back </Link>
+      </footer>
+     
     </div>
   );
 };
