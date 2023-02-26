@@ -37,14 +37,8 @@ const DogsData = () => {
                 <td>{dog.petGender}</td>
                 <td>{dog.petAge}</td>
                 <td>
-                  <button type="button" class="btn btn-outline-primary">
+                <button type="button" class="btn btn-outline-primary">
                     VIEW
-                  </button>
-                  <button type="button" class="btn btn-outline-success mx-2">
-                    UPDATE
-                  </button>
-                  <button type="button" class="btn btn-outline-danger">
-                    DELETE
                   </button>
                 </td>
               </tr>
