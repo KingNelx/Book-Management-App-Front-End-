@@ -20,7 +20,7 @@ const Topnav = () => {
     register;
 
   const registerPet = (e) => {
-    setRegistration({ ...register, [e.target.name]: e.target.value });
+    setRegistration({ ...register, [e.target.name]: e.target.value.toUpperCase() });
   };
 
   const submitRegistration = async (e) => {
@@ -28,7 +28,6 @@ const Topnav = () => {
     await axios.post("http://localhost:8080/registerPet",register)
     navigate('/home')
     window.location.reload();
-
   }
 
   return (
@@ -99,6 +98,7 @@ const Topnav = () => {
                         value={ownerName}
                         name="ownerName"
                         onChange={(e)=> registerPet(e)}
+                        
                       />
                     </div>
                     <div class="col-md-4">
