@@ -2,7 +2,6 @@ import './App.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Start from './Components/Start';
 import Home from './Components/Home';
-import Register from './Components/Register';
 import Others from './Components/OTHERS/Others';
 import Dogs from './Components/DOGS/Dogs';
 import Cats from './Components/CATS/Cats';
@@ -17,7 +16,6 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Start />} />
       <Route path="/home" element={<Home />} />
-      <Route path="/registerPet" element={<Register />} />
       <Route path="/otherPets" element={<Others />} />
       <Route path="/dogs" element={<Dogs />} />
       <Route path="/cats" element={<Cats />}/>
