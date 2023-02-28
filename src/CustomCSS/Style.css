@@ -6,3 +6,7 @@
 a{
     text-decoration: none;
 }
+
+.img-c img{
+    height: 60vh;
+}
