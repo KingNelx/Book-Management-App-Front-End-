@@ -9,6 +9,7 @@ import Rabbits from './Components/RABBITS/Rabbits';
 import Snakes from './Components/SNAKES/Snakes';
 import Birds from './Components/BIRDS/Birds';
 import Turtles from './Components/TURTLES/Turtles';
+import UpdateData from './Components/UpdateData';
 
 const App = () => {
   return ( 
@@ -23,6 +24,7 @@ const App = () => {
       <Route path="/snakes" element={<Snakes />} />
       <Route path="/birds" element={<Birds />}/>
       <Route path="/turtles" element={<Turtles />}/>
+      <Route path="/updateData" element={<UpdateData />} />
     </Routes>
    </Router>
    );
