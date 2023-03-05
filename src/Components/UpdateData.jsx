@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import { Link } from "react-router-dom";
 
 const UpdateData = () => {
   const navigate = useNavigate();
+  const {id} = useParams();
 
   const [pet, updatePate] = useState({
     ownerName: "",
@@ -26,6 +27,14 @@ const UpdateData = () => {
     hasVaccine,
   } = pet;
 
+  const updatePet = (e) => {
+    updatePate({... pet, [e.target.name]: e.target.value})
+  }
+
+  const petUpdate = async (e) => {
+    e.preventDefault();
+    await axios.put(`http://localhost:8080/pet/${id}`, pet)
+  }
   return (
     <div>
       <nav class="navbar bg-body-tertiary shadow-lg">
@@ -45,7 +54,7 @@ const UpdateData = () => {
         </div>
       </nav>
       <div className="container mt-5">
-        <form class="row g-3 needs-validation" novalidate>
+        <form class="row g-3 needs-validation" novalidate onSubmit={(e) => petUpdate(e)}>
           <div class="col-md-4">
             <label for="validationCustom01" class="form-label">
               Owner Name
@@ -55,6 +64,9 @@ const UpdateData = () => {
               class="form-control"
               id="validationCustom01"
               required
+              value={ownerName}
+              name="ownerName"
+              onChange={(e) => updatePate (e)}
             />
           </div>
           <div class="col-md-4">
@@ -66,6 +78,9 @@ const UpdateData = () => {
               class="form-control"
               id="validationCustom02"
               required
+              value={petName}
+              name="petName"
+              onChange={(e) => updatePate (e)}
             />
           </div>
           <div class="col-md-4">
@@ -77,6 +92,9 @@ const UpdateData = () => {
               class="form-control"
               id="validationCustom01"
               required
+              value={typeOfPet}
+              name="typeofPet"
+              onChange={(e) => updatePate (e)}
             />
           </div>
           <div class="col-md-4">
@@ -88,6 +106,9 @@ const UpdateData = () => {
               class="form-control"
               id="validationCustom01"
               required
+              value={petGender}
+              name="petGender"
+              onChange={(e) => updatePate (e)}
             />
           </div>
           <div class="col-md-4">
@@ -99,6 +120,9 @@ const UpdateData = () => {
               class="form-control"
               id="validationCustom01"
               required
+              value={address}
+              name="address"
+              onChange={(e) => updatePate (e)}
             />
           </div>
           <div class="col-md-4">
@@ -110,6 +134,9 @@ const UpdateData = () => {
               class="form-control"
               id="validationCustom01"
               required
+              value={petAge}
+              name="petAge"
+              onChange={(e) => updatePate (e)}
             />
           </div>
           <div class="col-md-4">
@@ -121,6 +148,9 @@ const UpdateData = () => {
               class="form-control"
               id="validationCustom01"
               required
+              value={hasVaccine}
+              name="hasVaccine"
+              onChange={(e) => updatePate (e)}
             />
           </div>
           <div class="col-12">

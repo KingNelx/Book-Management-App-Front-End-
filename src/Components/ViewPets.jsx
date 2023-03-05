@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "../CustomCSS/Scroll.css";
+import { Link } from "react-router-dom";
 
 const ViewPets = () => {
   const [pet, setPet] = useState([]);
@@ -16,48 +17,52 @@ const ViewPets = () => {
 
   return (
     <div className="container mt-5 text-center scroller">
-     { pet.length > 0 ? (
-       <table className="table table-striped table-hover">
-       <thead>
-         <tr>
-           <th scope="col">#</th>
-           <th scope="col">Owner Name</th>
-           <th scope="col">Pet Name</th>
-           <th scope="col">Address</th>
-           <th scope="col">Age</th>
-           <th scope="col">Vaccinated</th>
-           <th scope="col">Action</th>
-         </tr>
-       </thead>
-       <tbody>
-         {pet.map((pets, index) => (
-           <tr>
-             <th scope="row" key={index}>
-               {index + 1}
-             </th>
-             <td>{pets.ownerName}</td>
-             <td>{pets.petName}</td>
-             <td>{pets.address}</td>
-             <td>{pets.petAge}</td>
-             <td>{pets.hasVaccine}</td>
-             <td>
-               <button type="button" className="btn btn-outline-primary">
-                 VIEW
-               </button>
-               <button type="button" className="btn btn-outline-success mx-2">
-                 UPDATE
-               </button>
-               <button type="button" className="btn btn-outline-danger">
-                 DELETE
-               </button>
-             </td>
-           </tr>
-         ))}
-       </tbody>
-     </table>
-     ):(
-      <p> NO DATA FOUND </p>
-     )}
+      {pet.length > 0 ? (
+        <table className="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Owner Name</th>
+              <th scope="col">Pet Name</th>
+              <th scope="col">Address</th>
+              <th scope="col">Age</th>
+              <th scope="col">Vaccinated</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {pet.map((pets, index) => (
+              <tr>
+                <th scope="row" key={index}>
+                  {index + 1}
+                </th>
+                <td>{pets.ownerName}</td>
+                <td>{pets.petName}</td>
+                <td>{pets.address}</td>
+                <td>{pets.petAge}</td>
+                <td>{pets.hasVaccine}</td>
+                <td>
+                  <Link type="button" className="btn btn-outline-primary">
+                    VIEW
+                  </Link>
+                  <Link
+                    to={`/updateData/${pets.id}`}
+                    type="button"
+                    className="btn btn-outline-success mx-2"
+                  >
+                    UPDATE
+                  </Link>
+                  <Link type="button" className="btn btn-outline-danger">
+                    DELETE
+                  </Link>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      ) : (
+        <p> NO DATA FOUND </p>
+      )}
     </div>
   );
 };
