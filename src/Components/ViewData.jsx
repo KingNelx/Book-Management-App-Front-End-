@@ -30,7 +30,14 @@ const ViewData = () => {
 
   // de construct
 
-  const {ownerName, petName, ownerAge, petAge, address, petGender, typeOfPet, hasV} = myPets
+  const {ownerName, petName, ownerAge, petAge, address, petGender, typeOfPet, hasVaccine} = myPets
+
+  // on change
+
+  const onChange = (e) =>{
+    const toUpperCaseValue = e.target.value.toUpperCase();
+    addPets({... myPets, [e.target.name]: toUpperCaseValue})
+  }
 
   return (
     <div className="container mt-5">
@@ -76,6 +83,9 @@ const ViewData = () => {
                     class="form-control"
                     id="validationCustom01"
                     required
+                    name="ownerName"
+                    value={ownerName}
+                    onChange={(e) => onChange(e)}
                   />
                 </div>
 
@@ -88,6 +98,9 @@ const ViewData = () => {
                     class="form-control"
                     id="validationCustom01"
                     required
+                    name="petName"
+                    value={petName}
+                    onChange={(e) => onChange(e)}
                   />
                 </div>
 
@@ -100,6 +113,9 @@ const ViewData = () => {
                     class="form-control"
                     id="validationCustom01"
                     required
+                    name="ownerAge"
+                    value={ownerAge}
+                    onChange={(e) => onChange(e)}
                   />
                 </div>
 
@@ -112,6 +128,9 @@ const ViewData = () => {
                     class="form-control"
                     id="validationCustom01"
                     required
+                    name="petAge"
+                    value={petAge}
+                    onChange={(e) => onChange(e)}
                   />
                 </div>
 
@@ -124,6 +143,9 @@ const ViewData = () => {
                     class="form-control"
                     id="validationCustom01"
                     required
+                    name="address"
+                    value={address}
+                    onChange={(e) => onChange(e)}
                   />
                 </div>
 
@@ -136,6 +158,9 @@ const ViewData = () => {
                     class="form-control"
                     id="validationCustom01"
                     required
+                    name="petGender"
+                    value={petGender}
+                    onChange={(e) => onChange(e)}
                   />
                 </div>
 
@@ -148,6 +173,9 @@ const ViewData = () => {
                     class="form-control"
                     id="validationCustom01"
                     required
+                    name="typeOfPet"
+                    value={typeOfPet}
+                    onChange={(e) => onChange(e)}
                   />
                 </div>
 
@@ -160,6 +188,9 @@ const ViewData = () => {
                     class="form-control"
                     id="validationCustom01"
                     required
+                    name="hasVaccine"
+                    value={hasVaccine}
+                    onChange={(e) => onChange(e)}
                   />
                 </div>
 
