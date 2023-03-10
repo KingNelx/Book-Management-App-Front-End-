@@ -41,7 +41,7 @@ const ViewData = () => {
                 <td>{pet.petAge}</td>
                 <td>{pet.address}</td>
                 <td>{pet.petGender}</td>
-                <td>{pet.petType}</td>
+                <td>{pet.typeOfPet}</td>
                 <td>{pet.hasVaccine}</td>
               </tr>
             ))}
