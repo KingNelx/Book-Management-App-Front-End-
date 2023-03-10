@@ -3,7 +3,7 @@ const HomeTopNav = () => {
     <div>
       <nav class="navbar bg-body-tertiary shadow-lg">
         <div class="container-fluid">
-          <a class="navbar-brand">ShowDemYouPet</a>
+          <a class="navbar-brand">List of All Pets</a>
           <form class="d-flex" role="search">
             <input
               class="form-control me-2"
