@@ -18,8 +18,19 @@ const ViewData = () => {
   // adding state
   const [myPets, addPets] = useState({
         ownerName: "",
+        petName: "",
+        ownerAge: "",
+        petAge: "",
+        address: "",
+        petGender: "",
+        typeOfPet: "",
+        hasVaccine: ""
         
   })
+
+  // de construct
+
+  const {ownerName, petName, ownerAge, petAge, address, petGender, typeOfPet, hasV} = myPets
 
   return (
     <div className="container mt-5">
@@ -61,7 +72,7 @@ const ViewData = () => {
                     Owner name
                   </label>
                   <input
-                    type="text"
+                    type={"text"}
                     class="form-control"
                     id="validationCustom01"
                     required
@@ -73,7 +84,7 @@ const ViewData = () => {
                     Pet Name
                   </label>
                   <input
-                    type="text"
+                    type={"text"}
                     class="form-control"
                     id="validationCustom01"
                     required
@@ -85,7 +96,7 @@ const ViewData = () => {
                     Owner Age
                   </label>
                   <input
-                    type="text"
+                    type={"text"}
                     class="form-control"
                     id="validationCustom01"
                     required
@@ -97,7 +108,7 @@ const ViewData = () => {
                     Pet Age
                   </label>
                   <input
-                    type="text"
+                    type={"text"}
                     class="form-control"
                     id="validationCustom01"
                     required
@@ -109,7 +120,7 @@ const ViewData = () => {
                     Address
                   </label>
                   <input
-                    type="text"
+                    type={"text"}
                     class="form-control"
                     id="validationCustom01"
                     required
@@ -121,7 +132,7 @@ const ViewData = () => {
                     Pet Gender
                   </label>
                   <input
-                    type="text"
+                    type={"text"}
                     class="form-control"
                     id="validationCustom01"
                     required
@@ -133,7 +144,7 @@ const ViewData = () => {
                     Type of Pet
                   </label>
                   <input
-                    type="text"
+                    type={"text"}
                     class="form-control"
                     id="validationCustom01"
                     required
@@ -145,7 +156,7 @@ const ViewData = () => {
                     Has Vaccine
                   </label>
                   <input
-                    type="text"
+                    type={"text"}
                     class="form-control"
                     id="validationCustom01"
                     required
