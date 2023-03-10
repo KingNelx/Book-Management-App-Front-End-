@@ -10,7 +10,7 @@ const Grid = () => {
             <CarouselDesign />
         </div>
         <div class="col mt-5 py-5 fs-1">
-            <Link to="/"> Get Started </Link>
+            <Link to="/home"> Get Started </Link>
         </div>
       </div>
     </div>
