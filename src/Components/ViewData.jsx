@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import {useNavigate} from "react-router-dom"
+import Buttons from "./Buttons";
 
 const ViewData = () => {
     // viewing state
   const [pets, setPets] = useState([]);
+
+  // use nav hook
+  const navigate = useNavigate()
 
   useEffect(() => {
     loadAllPets();
@@ -13,6 +17,7 @@ const ViewData = () => {
   const loadAllPets = async () => {
     const result = await axios.get("http://localhost:8080/api/getAllPets");
     setPets(result.data);
+
   };
 
   // adding state
@@ -37,8 +42,15 @@ const ViewData = () => {
   const onChange = (e) =>{
     const toUpperCaseValue = e.target.value.toUpperCase();
     addPets({... myPets, [e.target.name]: toUpperCaseValue})
+    
   }
 
+  const onSubmitData = async (data) => {
+    data.preventDefault();
+    await axios.post("http://localhost:8080/api/addPet", myPets)
+    window.location.reload();
+    navigate('/home')
+  }
   return (
     <div className="container mt-5">
       <button
@@ -73,7 +85,7 @@ const ViewData = () => {
               ></button>
             </div>
             <div class="modal-body">
-              <form class="row g-3 needs-validation" novalidate>
+              <form class="row g-3 needs-validation" novalidate onSubmit={(data) => onSubmitData (data)}>
                 <div class="col-md-4">
                   <label for="validationCustom01" class="form-label">
                     Owner name
@@ -215,6 +227,9 @@ const ViewData = () => {
       </div>
 
       {pets.length > 0 ? (
+        <div style={
+          {height: "200px", overflowY: "auto"}
+        }>
         <table class="table table-striped text-center">
           <thead>
             <tr>
@@ -224,6 +239,7 @@ const ViewData = () => {
               <th scope="col">Pet Gender</th>
               <th scope="col">Type of Pet</th>
               <th scope="col">Has Vaccine</th>
+              <th scope="col">Action</th>
             </tr>
           </thead>
           <tbody>
@@ -235,10 +251,14 @@ const ViewData = () => {
                 <td>{pet.petGender}</td>
                 <td>{pet.typeOfPet}</td>
                 <td>{pet.hasVaccine}</td>
+                <td>
+                  {<Buttons />}
+                </td>
               </tr>
             ))}
           </tbody>
         </table>
+        </div>
       ) : (
         <p className="text-center">NO DATA FOUND</p>
       )}
