@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Buttons from "./Buttons";
 import Swal from "sweetalert2";
-
+import {Link} from "react-router-dom"
 
 const ViewData = () => {
   // viewing state
@@ -68,6 +68,8 @@ const ViewData = () => {
     navigate("/home");
   };
 
+  
+
   return (
     <div className="container mt-5">
       <button
@@ -79,6 +81,7 @@ const ViewData = () => {
         Register Pet
       </button>
 
+    <Link to="/others"   class="btn btn-outline-primary mx-2">View Others</Link>
       <div
         class="modal fade"
         id="staticBackdrop"
