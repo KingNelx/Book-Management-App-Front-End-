@@ -1,4 +1,4 @@
-const Cats = () => {
+const BirdsData = () => {
     return ( 
         <div>
             
@@ -6,4 +6,4 @@ const Cats = () => {
      );
 }
  
-export default Cats;
+export default BirdsData;

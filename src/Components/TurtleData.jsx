@@ -1,4 +1,4 @@
-const Dogs = () => {
+const TurtleData = () => {
     return ( 
         <div>
             
@@ -6,4 +6,4 @@ const Dogs = () => {
      );
 }
  
-export default Dogs;
+export default TurtleData;
