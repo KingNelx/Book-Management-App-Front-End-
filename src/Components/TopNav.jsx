@@ -3,7 +3,7 @@ const TopNav = () => {
     <div>
       <nav class="navbar bg-body-tertiary shadow-lg mx-2 my-2 p-3">
         <div class="container-fluid">
-          <a class="navbar-brand">WELCOME</a>
+          <a class="navbar-brand">WELCOME (ShowDemYouPets)</a>
         </div>
       </nav>
     </div>

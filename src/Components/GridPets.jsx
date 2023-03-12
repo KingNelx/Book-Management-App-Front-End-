@@ -4,6 +4,7 @@ import rabbit from '../Images/rabbit.jpg'
 import birds from '../Images/bird.jpg'
 import turtle from '../Images/turtle.jpg'
 import mouse from '../Images/mouse.jpg'
+import {Link} from "react-router-dom"
 
 const GridPets = () => {
   return (
@@ -15,9 +16,9 @@ const GridPets = () => {
               <img src={dog} class="card-img-top" alt="..." />
               <div class="card-body shadow-lg">
                 <h5 class="card-title">DOGS</h5>
-                <a href="#" class="btn btn-outline-primary">
+                <Link to="/dogs" class="btn btn-outline-primary">
                   VIEW
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -26,9 +27,9 @@ const GridPets = () => {
               <img src={cat} class="card-img-top" alt="..." />
               <div class="card-body shadow-lg">
                 <h5 class="card-title">CATS</h5>
-                <a href="#" class="btn btn-outline-primary">
+                <Link to="/cats"  class="btn btn-outline-primary">
                   VIEW
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -37,9 +38,9 @@ const GridPets = () => {
               <img src={rabbit} class="card-img-top" alt="..." />
               <div class="card-body shadow-lg">
                 <h5 class="card-title">RABBITS</h5>
-                <a href="#" class="btn btn-outline-primary">
+                <Link to="/rabbits" class="btn btn-outline-primary">
                   VIEW
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -51,9 +52,9 @@ const GridPets = () => {
               <img src={birds} class="card-img-top" alt="..." />
               <div class="card-body shadow-lg">
                 <h5 class="card-title">BIRDS</h5>
-                <a href="#" class="btn btn-outline-primary">
+                <Link to="/birds" class="btn btn-outline-primary">
                  VIEW
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -62,9 +63,9 @@ const GridPets = () => {
               <img src={turtle} class="card-img-top" alt="..." />
               <div class="card-body shadow-lg">
                 <h5 class="card-title">TURTLE</h5>
-                <a href="#" class="btn btn-outline-primary">
+                <Link to="/turtle" class="btn btn-outline-primary">
                  VIEW
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -73,9 +74,9 @@ const GridPets = () => {
               <img src={mouse} class="card-img-top" alt="..." />
               <div class="card-body shadow-lg">
                 <h5 class="card-title">MOUSE</h5>
-                <a href="#" class="btn btn-outline-primary">
+                <Link to="/mouse" class="btn btn-outline-primary">
                   VIEW
-                </a>
+                </Link>
               </div>
             </div>
           </div>
