@@ -39,7 +39,7 @@ const DogsData = () => {
               <tr>
                 <th scope="col">#</th>
                 <th scope="col">Owner name</th>
-                <th scope="col">petName</th>
+                <th scope="col">Pet Name</th>
                 <th scope="col">Pet Gender</th>
                 <th scope="col">Pet Age</th>
                 <th scope="col">Has Vaccine</th>

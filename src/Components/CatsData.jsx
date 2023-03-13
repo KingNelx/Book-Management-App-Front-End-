@@ -68,6 +68,7 @@ const CatsData = () => {
         ) : (
           <p> NO DATA FOUND </p>
         )}
+        <Link to="/others"> Go Back </Link>
       </section>
     </div>
   );
