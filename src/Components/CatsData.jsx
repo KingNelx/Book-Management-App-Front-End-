@@ -31,7 +31,7 @@ const CatsData = () => {
         </div>
       </nav>
 
-      <section className="text-center mt-5">
+      <section className="text-center mt-5 container">
         {cats.length > 0 ? (
           <table class="table table-striped">
             <thead>
