@@ -3,8 +3,18 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 const TurtleData = () => {
+
   const [turtles, setTurtles] = useState([]);
 
+  const loadAllTurtles = async () => {
+    const result = await axios.get("http://localhost:8080/api/turtle");
+    setTurtles(result.data);
+  };
+
+  useEffect(() => {
+    loadAllTurtles();
+  }, []);
+  
   return (
     <div>
       <nav class="navbar bg-body-tertiary shadow-lg">
