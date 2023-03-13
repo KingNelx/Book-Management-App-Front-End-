@@ -43,17 +43,25 @@ const DogsData = () => {
                 <th scope="col">Pet Gender</th>
                 <th scope="col">Pet Age</th>
                 <th scope="col">Has Vaccine</th>
+                <th scope="col">Action</th>
               </tr>
             </thead>
             {dogs.map((dog, index) => (
               <tbody>
                 <tr>
-                  <th scope="row">1</th>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <th scope="row" key={index}>
+                    {index + 1}
+                  </th>
+                  <td>{dog.ownerName}</td>
+                  <td>{dog.petName}</td>
+                  <td>{dog.petGender}</td>
+                  <td>{dog.petAge}</td>
+                  <td>{dog.hasVaccine}</td>
+                  <td>
+                    <button type="button" class="btn btn-outline-primary">
+                      VIEW
+                    </button>
+                  </td>
                 </tr>
               </tbody>
             ))}
@@ -61,6 +69,7 @@ const DogsData = () => {
         ) : (
           <p>NO DATA FOUND</p>
         )}
+        <Link to="/others">Go Back</Link>
       </section>
     </div>
   );
