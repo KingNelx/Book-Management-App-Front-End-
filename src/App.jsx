@@ -9,6 +9,7 @@ import RabbitsData from "./Components/RabbitsData";
 import BirdsData from "./Components/BirdsData";
 import TurtleData from "./Components/TurtleData";
 import MouseData from "./Components/MouseData";
+import ServerError from "./Components/ServerError";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/birds" element={<BirdsData />} />
         <Route path="/turtle" element={<TurtleData />} />
         <Route path="/mouse" element={<MouseData />} />
+        <Route path="*" element={<ServerError />} />
       </Routes>
     </Router>
   );
