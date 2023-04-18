@@ -7,13 +7,14 @@ const ViewData = () => {
 
     const [books, setBook] = useState([])
 
-    const loadAllBooks = async () => {
-        const result = await axios.get("http://localhost:8080/api/book/getAllBooks")
-        setBook(result.data);
+
+    const loadAllBooksData = async () => {
+        const bookData = await axios.get("http://localhost:8080/api/book/getAllBooks")
+        setBook(bookData.data);
     }
 
     useEffect(() => {
-        loadAllBooks();
+        loadAllBooksData();
     }, [])
 
 
@@ -24,7 +25,7 @@ const ViewData = () => {
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Book</th>
-                        <th scope="col">Author</th>
+                        <th scope="col">Date Published</th>
                         <th scope="col">Genre</th>
                         <th scope="col">Action</th>
                     </tr>
@@ -35,7 +36,7 @@ const ViewData = () => {
                             <tr>
                                 <th scope="row" key={index}>{index + 1}</th>
                                 <td>{book.bookName}</td>
-                                <td>{book.firstName}</td>
+                                <td>{book.datePublished}</td>
                                 <td>{book.genre}</td>
                                 <td>
                                 <button type="button" class="btn btn-outline-primary">VIEW</button>
