@@ -1,12 +1,12 @@
 import axios from "axios"
 import { Link } from "react-router-dom";
 
-const Comedy = () => {
+const Knowledge = () => {
     return ( 
         <div>
-TEST
+
         </div>
      );
 }
  
-export default Comedy;
+export default Knowledge;
