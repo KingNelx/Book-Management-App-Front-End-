@@ -21,7 +21,6 @@ const ViewData = () => {
     }
 
 
-
     useEffect(() => {
         loadAllBooksData();
     }, [])

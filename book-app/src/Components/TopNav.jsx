@@ -1,7 +1,7 @@
 const TopNav = () => {
     return (
         <div>
-            <nav class="navbar bg-body-tertiary shadow-lg">
+            <nav class="navbar bg-body-tertiary shadow-lg py-3">
                 <div class="container-fluid">
                     <a class="navbar-brand">Book Management System</a>
                     <form class="d-flex" role="search">
